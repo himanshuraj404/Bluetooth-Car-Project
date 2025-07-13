@@ -49,7 +49,7 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 ![RC Bluetooth Car 2](RC_Car2.jpg)
 
 ### 📉 Circuit Diagram:
-![Circuit Diagram](circuit_Diagram.jpg)
+![Circuit Diagram](Circuit_Diagram.jpg)
 
 ### 🎥 Demo Video:  
 👉 [Watch Demo on Google Drive](https://drive.google.com/file/d/1Isn2PvALLrIhElebB9bnpnUN6x8GbA88/view?usp=drive_link)
