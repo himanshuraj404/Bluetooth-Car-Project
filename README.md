@@ -77,7 +77,7 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 
 **Himanshu Raj** |
 B.Tech EE @ NIT Patna  
-[GitHub](https://github.com/your-himanshuraj404)
+[GitHub](https://github.com/himanshuraj404)
 [LinkedIn](https://linkedin.com/in/himanshurajx)
 
 
