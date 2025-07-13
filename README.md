@@ -1,6 +1,6 @@
 ## 🚗 Remote Controlled Bluetooth Car
 
-This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using *Arduino Uno. The car can be wirelessly controlled using a mobile app via Bluetooth communication. Designed as a beginner-friendly robotics project in the **Tinkering Lab at NIT Patna**, this helped enhance my hands-on skills in embedded systems, wireless control, and microcontroller programming.
+This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using **Arduino Uno**. The car can be wirelessly controlled using a mobile app via Bluetooth communication. Designed as a beginner-friendly robotics project in the **Tinkering Lab at NIT Patna**, this helped enhance my hands-on skills in embedded systems, wireless control, and microcontroller programming.
 
 ---
 
@@ -19,8 +19,8 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 
 - Developed an Arduino-based RC car controlled via Bluetooth using a smartphone.
 - The **HC-05 Bluetooth module** connects to the mobile app, which sends forward, backward, left, and right commands.
-- The **Arduino** receives these commands and sends control signals to the **L298N Motor Driver**, which powers the **DC motors**.
-- This project helped me understand basic *embedded systems, **Bluetooth serial communication, and **motor driver logic**.
+- The **Arduino** receives these commands and sends control signals to the **L298N Motor Driver**, which powers the **DC motors** accordingly.
+- This project helped me understand basic **embedded systems**, **Bluetooth serial communication**, and **motor driver logic**.
 
 ---
 
@@ -75,7 +75,7 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 
 ## 👨‍💻 Author
 
-**Himanshu Raj**
+**Himanshu Raj** |
 B.Tech EE @ NIT Patna  
 [GitHub](https://github.com/your-himanshuraj404)
 [LinkedIn](https://linkedin.com/in/himanshurajx)
