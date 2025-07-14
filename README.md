@@ -44,9 +44,12 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 
 ## 📷 Media
 
-### 🔧 RC Car Setup:
-![RC Bluetooth Car 1](RC_Car1.jpg)  
-![RC Bluetooth Car 2](RC_Car2.jpg)
+### 📷 RC Car Images
+
+<p align="center">
+  <img src="RC_Car1.jpg" alt="RC Car Front" width="45%" />
+  <img src="RC_Car2.jpg" alt="RC Car Side" width="45%" />
+</p>
 
 ### 📉 Circuit Diagram:
 ![Circuit Diagram](Circuit_Diagram.jpg)
