@@ -47,8 +47,8 @@ This project demonstrates a Bluetooth-operated Remote Controlled (RC) car using 
 ### 📷 RC Car Images
 
 <p align="center">
-  <img src="RC_Car1.jpg" alt="RC Car Front" width="45%" />
-  <img src="RC_Car2.jpg" alt="RC Car Side" width="45%" />
+  <img src="RC_Car1.jpg" alt="RC Car Front" width="30%" />
+  <img src="RC_Car2.jpg" alt="RC Car Side" width="30%" />
 </p>
 
 ### 📉 Circuit Diagram:
