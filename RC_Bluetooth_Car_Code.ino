@@ -1,83 +1,90 @@
-// Motor driver pins
-#define ENA 3
-#define IN1 5
-#define IN2 6
-#define IN3 9
-#define IN4 10
-#define ENB 11
+// Motor control pins
+#define IN1 12
+#define IN2 11
+#define IN3 10
+#define IN4 9
 
-// Bluetooth pins (Software Serial)
-#include <SoftwareSerial.h>
-SoftwareSerial BT(2, 4); // RX | TX
+// ENA and ENB (connect to PWM pins if needed)
+#define ENA 6
+#define ENB 5
+
+char command;
 
 void setup() {
-  // Motor pins as output
-  pinMode(ENA, OUTPUT);
-  pinMode(ENB, OUTPUT);
+  // Set all pins as output
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
 
-  // Start Bluetooth serial
-  BT.begin(9600);
-  Serial.begin(9600); // Optional, for debugging
-
-  // Initial motor state
+  // Set initial motor state to off
   stopMotors();
+
+  // Start serial communication with HC-05
+  Serial.begin(9600);
 }
 
 void loop() {
-  if (BT.available()) {
-    char command = BT.read();
-    Serial.println(command); // Debugging
+  if (Serial.available()) {
+    command = Serial.read();
 
     switch (command) {
-      case 'F': moveForward(); break;
-      case 'B': moveBackward(); break;
-      case 'L': turnLeft(); break;
-      case 'R': turnRight(); break;
-      case 'S': stopMotors(); break;
-      default: stopMotors(); break;
+      case 'F':
+        forward();
+        break;
+      case 'B':
+        backward();
+        break;
+      case 'L':
+        left();
+        break;
+      case 'R':
+        right();
+        break;
+      case 'S':
+        stopMotors();
+        break;
     }
   }
 }
 
 // Motor control functions
-void moveForward() {
+void forward() {
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  analogWrite(ENA, 150); // Speed 0-255
-  analogWrite(ENB, 150);
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
-void moveBackward() {
+void backward() {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-  analogWrite(ENA, 150);
-  analogWrite(ENB, 150);
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
-void turnLeft() {
+void left() {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  analogWrite(ENA, 150);
-  analogWrite(ENB, 150);
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
-void turnRight() {
+void right() {
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-  analogWrite(ENA, 150);
-  analogWrite(ENB, 150);
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
 void stopMotors() {
@@ -86,5 +93,5 @@ void stopMotors() {
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, LOW);
   analogWrite(ENA, 0);
-  analogWrite(ENB, 0);
+  analogWrite(ENB, 0);
 }
